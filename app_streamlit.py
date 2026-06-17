@@ -90,9 +90,9 @@ if st.button("Predict", type="primary"):
     except ClientError as e:
         st.error(f"AWS error: {e.response['Error'].get('Message', str(e))}")
     else:
-        label = result["labels"][0]
+        label = result["predictions_label"][0]
         probs = result["probabilities"][0]
-
+    
         st.success(f"Prediction: {label}")
         st.write("Class probabilities:")
         st.bar_chart({"probability": probs})
