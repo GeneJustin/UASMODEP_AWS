@@ -4,7 +4,7 @@ import boto3
 import streamlit as st
 from botocore.exceptions import ClientError, NoCredentialsError
 
-ENDPOINT_NAME = os.environ.get("ENDPOINT_NAME", "creditendpoint")
+ENDPOINT_NAME = os.environ.get("ENDPOINT_NAME", "creditendpoints")
 REGION = os.environ.get("AWS_REGION", "us-east-1")
 
 
